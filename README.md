@@ -4,6 +4,14 @@ Brazo robótico de *pick and place* diseñado en **Autodesk Inventor**, impreso 
 
 > Proyecto universitario — Universidad San Francisco de Quito (USFQ).
 
+<p align="center">
+  <img src="docs/media/brazo_robotico.gif" alt="Brazo robótico en funcionamiento sobre un tablero de ajedrez" width="240">
+  &nbsp;&nbsp;
+  <img src="docs/media/modelo_cad.jpg" alt="Modelo CAD del brazo robótico" width="420">
+</p>
+
+[▶ Ver video en mejor calidad](docs/media/brazo_robotico.mp4)
+
 ## Cómo funciona
 
 `move_to_point.py` lleva el efector final a un punto `(X, Y, Z)` en milímetros:
@@ -20,12 +28,21 @@ Brazo robótico de *pick and place* diseñado en **Autodesk Inventor**, impreso 
 | Eslabón 1 (`θ1`) | Motor 2 | 47/19 ≈ 2.47 | GPIO 17 | GPIO 27 |
 | Eslabón 2 (`q2`) | Motor 3 (cableado invertido) | 47/19 ≈ 2.47 | GPIO 20 | GPIO 26 |
 
+## Fabricación
+
+Las piezas se imprimieron en 3D en una **Creality Ender-3 V3 SE** (boquilla de 0,4 mm) con **PLA**, con soportes tipo árbol. La placa mostrada pesa 117 g de filamento y se imprime en unas 6 h.
+
+<p align="center">
+  <img src="docs/media/laminado_impresion3d.jpg" alt="Laminado de las piezas del brazo en el slicer" width="720">
+</p>
+
 ## Estructura
 
 | Archivo | Uso |
 |---|---|
 | `move_to_point.py` | Programa principal: cinemática inversa, mecanismo de barras y movimiento sincronizado al punto objetivo |
 | `tools/stepper_test.py` | Prueba de un motor a la vez, para verificar cableado, pines y sentido de giro |
+| `docs/media/` | Video, GIF, modelo CAD y laminado para impresión 3D |
 | `IK.py` | Cinemática inversa (`solve_ik`) — *pendiente de subir* |
 
 ## Requisitos
